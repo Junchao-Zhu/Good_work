@@ -2,10 +2,6 @@
 """
 Training Script for Dual-Backbone Gene Expression Prediction
 
-Stage 1: DenseNet-121 + GeneEncoder    <- BLEEP contrastive (temp=0.07)
-Stage 2: ViT-B + RegressionHead        <- MSE loss
-Stage 3: BranchClassifier              <- MSE + regularization (both frozen)
-
 Key design choices:
   - BLEEP uses its own DenseNet-121 backbone (end-to-end)
   - Temperature = 0.07 (standard CLIP/BLEEP)
@@ -1416,3 +1412,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
